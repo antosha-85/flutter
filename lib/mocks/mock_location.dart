@@ -72,11 +72,15 @@ class MockLocation extends Location {
                   'Kyoto airport, with several terminals, is located 16 kilometres south of the city and is also known as Kyoto. Kyoto can also be reached by transport links from other regional airports.')
         ]),
   ];
-  static Location FetchAny() {
+  static Location fetchAny() {
     return MockLocation.items[0];
   }
 
   static List<Location> fetchAll() {
     return MockLocation.items;
+  }
+
+  static Location fetch(int index) {
+    return MockLocation.items[index];
   }
 }
